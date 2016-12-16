@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>    
+    
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+    
+    <script src="app.js"></script>
+
+  </head>
+
+  <body>
+    
+    <h1>
+      angular-chart.js issue #571
+      <small>Legend Item Changes Does Not Update Chart on Click</small>
+    </h1>
+    <p>
+      See: <a href="https://github.com/jtblin/angular-chart.js/issues/571">https://github.com/jtblin/angular-chart.js/issues/571</a>
+    </p>
+    
+    <div ng-controller="ChartController as chart">
+      
+      <canvas
+        id="line"
+        class="chart chart-line"
+        chart-data="chart.data"
+        chart-labels="chart.labels"
+        chart-series="chart.series"
+        chart-options="chart.options"
+        height="100">
+      </canvas>
+
+    </div>
+
+  </body>
+
+</html>
